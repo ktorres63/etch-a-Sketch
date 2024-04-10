@@ -33,15 +33,28 @@
 .generate {
   background-color: #04aa6d;
 }
+.generate:hover {
+  background-color: #46a049;
+}
 .reset {
-  background-color: #007bff;
+  background-color: #f44336;
+}
+.reset:hover {
+  background: #da190b;
 }
 .randomColor {
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
-    rgba(0, 0, 255, 1) 50%,
-    rgba(0, 255, 0, 1) 100%
-    
+    rgba(0, 255, 0, 1) 50%,
+    rgba(0, 0, 255, 1) 100%
+  );
+}
+.randomColor:hover{
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(0, 255,0, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
   );
 }
