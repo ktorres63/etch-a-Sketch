@@ -5,6 +5,9 @@ container.style.width = `${size * 10 + 2}px`; // container width in px
 const sizeBtn = document.querySelector("#saveSize");
 
 sizeBtn.addEventListener("click", () => {
+
+  deleteGrid(container);
+
   const inputSize = document.querySelector("#inputSize");
   size = parseInt(inputSize.value);
   generateGrid(size)
@@ -18,7 +21,13 @@ function generateGrid(size){
     container.appendChild(pixel);
   }
 }
+function deleteGrid(container){
+  const oldPixels = document.querySelectorAll(".pixel");
+  oldPixels.forEach((px)=>{
+    container.removeChild(px)
+  });
 
+}
 
 function mouseover(pixel) {
   pixel.addEventListener("mouseover", (e) => {
