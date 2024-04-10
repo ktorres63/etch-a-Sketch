@@ -45,3 +45,11 @@ function mouseover(pixel) {
     e.target.style.backgroundColor = overColor;
   });
 }
+function randomColor(){
+  let randomR = Math.floor(Math.random()*256);
+  let randomG = Math.floor(Math.random()*256);
+  let randomB = Math.floor(Math.random()*256);
+
+
+  return `rgb(${randomR},${randomG},${randomB})`;
+}
