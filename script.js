@@ -5,7 +5,7 @@ const pixelEdge = 15;
 
 const container = document.querySelector(".container");
 const resetBtn = document.querySelector("#resetPixels");
-const sizeBtn = document.querySelector("#saveSize");
+const saveBtn = document.querySelector("#saveSize");
 
 function resetPixels() {
   const pixels = document.querySelectorAll(".pixel");
@@ -25,7 +25,8 @@ generateGrid(16);
 
 resetBtn.addEventListener("click", resetPixels);
 
-sizeBtn.addEventListener("click", () => {
+saveBtn.addEventListener("click", () => {
+  //TODO: add inputColor
   const inputSize = document.querySelector("#inputSize");
   let size = parseInt(inputSize.value);
   generateGrid(size);
