@@ -13,11 +13,8 @@
   margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
-  width: 10px;
 }
 .pixel {
-  width: 10px;
-  height: 10px;
   background-color: rgb(170, 221, 221);
   border: 1px black solid;
 }
