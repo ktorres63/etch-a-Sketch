@@ -2,17 +2,16 @@ const container = document.querySelector(".container");
 
 const sizeBtn = document.querySelector("#saveSize");
 sizeBtn.addEventListener("click", () => {
-  deleteGrid(container);
+  deletePixels(container);
 
   const inputSize = document.querySelector("#inputSize");
 
   let size = parseInt(inputSize.value);
   container.style.width = `${size * 10 + 2}px`; // container width in px 
-  deleteGrid(container);
-  generateGrid(size)
+  generatePixels(size)
 });
 
-function generateGrid(size){
+function generatePixels(size){
   for (let i = 0; i < size * size; i++) {
     let pixel = document.createElement("div");
     pixel.classList.add("pixel");
@@ -20,7 +19,7 @@ function generateGrid(size){
     container.appendChild(pixel);
   }
 }
-function deleteGrid(container){
+function deletePixels(container){
   const oldPixels = document.querySelectorAll(".pixel");
   oldPixels.forEach((px)=>{
     container.removeChild(px)
