@@ -1,3 +1,6 @@
+const baseColor = "rgb(170, 221, 221)";
+const overColor = "black"
+
 const container = document.querySelector(".container");
 const resetBtn = document.querySelector("#resetPixels");
 const sizeBtn = document.querySelector("#saveSize");
@@ -5,9 +8,10 @@ const sizeBtn = document.querySelector("#saveSize");
 generateGrid(16);
 
 resetBtn.addEventListener("click", () => {
-  const inputSize = document.querySelector("#inputSize");
-  let size = parseInt(inputSize.value);
-  generateGrid(size);
+  const pixels = document.querySelectorAll(".pixel");
+  pixels.forEach((px) => {
+    px.style.backgroundColor = baseColor;
+  });
 });
 
 sizeBtn.addEventListener("click", () => {
@@ -38,6 +42,6 @@ function deletePixels(container) {
 
 function mouseover(pixel) {
   pixel.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = overColor;
   });
 }
