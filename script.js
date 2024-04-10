@@ -2,7 +2,6 @@ const baseColor = "rgb(170, 221, 221)";
 const overColor = "black";
 const pixelEdge = 15;
 
-
 const container = document.querySelector(".container");
 const resetBtn = document.querySelector("#resetPixels");
 const saveBtn = document.querySelector("#saveSize");
@@ -57,7 +56,6 @@ function getRandomColor() {
 function mouseover(pixel, randomColor = false) {
   if (randomColor) {
     pixel.addEventListener("mouseover", (e) => {
-      console.log("Im here");
       e.target.style.backgroundColor = getRandomColor();
     });
   } else {
