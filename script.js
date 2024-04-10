@@ -5,6 +5,8 @@ const container = document.querySelector(".container");
 const resetBtn = document.querySelector("#resetPixels");
 const sizeBtn = document.querySelector("#saveSize");
 
+const randomColBtn = document.querySelector("#randomColors");
+
 generateGrid(16);
 
 resetBtn.addEventListener("click", () => {
@@ -40,16 +42,19 @@ function deletePixels(container) {
   });
 }
 
-function mouseover(pixel) {
+function mouseover(pixel, randomColor=false) {
+  if(randomColor){
+
+  }
+  else{
   pixel.addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = overColor;
-  });
+  });}
 }
 function randomColor(){
   let randomR = Math.floor(Math.random()*256);
   let randomG = Math.floor(Math.random()*256);
   let randomB = Math.floor(Math.random()*256);
-
 
   return `rgb(${randomR},${randomG},${randomB})`;
 }
