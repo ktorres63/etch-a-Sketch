@@ -18,10 +18,30 @@
   background-color: rgb(170, 221, 221);
   border: 1px black solid;
 }
-#resetPixels{
-  display:block;
+#resetPixels {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
-
+.btn {
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.generate {
+  background-color: #04aa6d;
+}
+.reset {
+  background-color: #007bff;
+}
+.randomColor {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(0, 0, 255, 1) 50%,
+    rgba(0, 255, 0, 1) 100%
+    
+  );
+}

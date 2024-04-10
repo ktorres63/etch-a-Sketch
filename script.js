@@ -1,6 +1,6 @@
 const baseColor = "rgb(170, 221, 221)";
 const overColor = "black";
-const pixelEdge = 20;
+const pixelEdge = 15;
 
 
 const container = document.querySelector(".container");
