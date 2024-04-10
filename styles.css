@@ -19,7 +19,6 @@ h1{
   flex-wrap: wrap;
 }
 .pixel {
-  /* background-color: rgb(232, 241, 241); */
   border: 1px black solid;
 }
 #resetPixels {

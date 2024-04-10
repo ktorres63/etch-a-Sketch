@@ -25,7 +25,6 @@ generateGrid(16);
 resetBtn.addEventListener("click", resetPixels);
 
 saveBtn.addEventListener("click", () => {
-  //TODO: add inputColor
   const inputColor = document.querySelector("#inputColor")
   overColor = inputColor.value;
   console.log(inputColor.value);
