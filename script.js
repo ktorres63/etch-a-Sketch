@@ -1,5 +1,5 @@
-const baseColor = "rgb(170, 221, 221)";
-const overColor = "black";
+const baseColor = "rgb(232, 241, 241)";
+let overColor = "black";
 const pixelEdge = 15;
 
 const container = document.querySelector(".container");
@@ -26,6 +26,10 @@ resetBtn.addEventListener("click", resetPixels);
 
 saveBtn.addEventListener("click", () => {
   //TODO: add inputColor
+  const inputColor = document.querySelector("#inputColor")
+  overColor = inputColor.value;
+  console.log(inputColor.value);
+
   const inputSize = document.querySelector("#inputSize");
   let size = parseInt(inputSize.value);
   generateGrid(size);
@@ -42,6 +46,7 @@ function generatePixels(size, randomColor = false) {
     pixel.classList.add("pixel");
     pixel.style.width = `${pixelEdge}px`;
     pixel.style.height = `${pixelEdge}px`;
+    pixel.style.backgroundColor = baseColor;
     mouseover(pixel, randomColor);
     container.appendChild(pixel);
   }
