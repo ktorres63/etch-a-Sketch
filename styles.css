@@ -17,7 +17,7 @@
 .pixel {
   width: 10px;
   height: 10px;
-  background-color: aqua;
+  background-color: rgb(170, 221, 221);
   border: 1px black solid;
 }
 .pixel2 {
