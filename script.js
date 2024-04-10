@@ -1,15 +1,14 @@
 const container = document.querySelector(".container");
-let size = 16;
-container.style.width = `${size * 10 + 2}px`; // container width in px
 
 const sizeBtn = document.querySelector("#saveSize");
-
 sizeBtn.addEventListener("click", () => {
-
   deleteGrid(container);
 
   const inputSize = document.querySelector("#inputSize");
-  size = parseInt(inputSize.value);
+
+  let size = parseInt(inputSize.value);
+  container.style.width = `${size * 10 + 2}px`; // container width in px 
+  deleteGrid(container);
   generateGrid(size)
 });
 
